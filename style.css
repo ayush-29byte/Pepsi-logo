@@ -1,0 +1,51 @@
+body{
+    height: 100%;
+    background: #34588e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+}
+.pepsi{
+    border-radius: 50%;
+    background: #34588e;
+    height: 300px;
+    width: 300px;
+    border: 10px solid white;
+    overflow: hidden;
+    position: relative;
+    animation: shake .2s infinite alternate ease-in-out;
+}
+.pepsi:after{
+    border-radius: 50%;
+    background: #da473c;
+    height: 500px;
+    width: 500px;
+    content: "";
+    position: absolute;
+    top: -275px;
+    left: -300px;
+    z-index: 2;
+}
+
+.pepsi:before{
+    border-radius: 25%;
+    background: white;
+    height: 400px;
+    width: 500px;
+    content: "";
+    position: absolute;
+    top: -170px;
+    left: -240px;
+    z-index: 1;
+    transform: rotate(-15deg);
+}
+
+@keyframes shake{
+    0%{
+        transform: translate(-5px);
+    }
+    100%{
+        transform: translate(5px);
+    }
+}
